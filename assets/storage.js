@@ -34,7 +34,6 @@ function putHistory(data) {
 function renderHistory() {
     const historyData = showHistory();
     let historyList = document.querySelector("#historyList");
-  
     historyList.innerHTML = "";
   
   
