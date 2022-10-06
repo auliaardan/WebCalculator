@@ -2,7 +2,7 @@ const CACHE_KEY = "calculation_history";
 
 function checkForStorage() {
     return typeof(Storage) !== "undefined"
-   }
+}
 
 function putHistory(data) {
     if (checkForStorage()) {
@@ -21,7 +21,7 @@ function putHistory(data) {
   
         localStorage.setItem(CACHE_KEY, JSON.stringify(historyData));
     }
- }
+}
 
  function showHistory() {
     if (checkForStorage()) {
@@ -29,9 +29,9 @@ function putHistory(data) {
     } else {
         return [];
     }
- }
+}
 
- function renderHistory() {
+function renderHistory() {
     const historyData = showHistory();
     let historyList = document.querySelector("#historyList");
   
@@ -48,6 +48,6 @@ function putHistory(data) {
   
         historyList.appendChild(row);
     }
- }
+}
 
  renderHistory();
